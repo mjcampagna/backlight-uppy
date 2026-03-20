@@ -1,19 +1,24 @@
 {
-  "name": "browserify-uppy",
+  "name": "backlight-uppy",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Uppy bundled as a self-hosted ESM for Backlight",
+  "type": "module",
   "scripts": {
-    "build": "browserify src/index.js -o dist/uppy.js"
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Matt",
   "license": "ISC",
-  "devDependencies": {
-    "@uppy/core": "^1.1.0",
-    "@uppy/dashboard": "^1.1.0",
-    "@uppy/tus": "^1.2.0",
-    "browserify": "^16.2.3"
+  "dependencies": {
+    "@uppy/core": "^1.20.1",
+    "@uppy/dashboard": "^1.21.1",
+    "@uppy/tus": "^1.9.2"
   },
-  "dependencies": {}
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.49.0",
+    "rollup-plugin-css-only": "^4.5.2"
+  }
 }
